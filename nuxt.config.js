@@ -68,6 +68,16 @@ module.exports = {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: '#4fc08d'
+        },
+        light: {
+          primary: '#e95420',
+          // accent: '#f3de8a',
+          accent: '#77216F',
+          secondary: '#170312',
+          info: '#2B2D42',
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: '#4fc08d'
         }
       }
     }

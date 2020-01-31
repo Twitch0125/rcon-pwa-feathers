@@ -20,7 +20,7 @@ export default {
     return {
       client: data.client
     }
-  }
+  },
 }
 </script>
 

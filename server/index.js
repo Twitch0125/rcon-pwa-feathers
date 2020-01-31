@@ -3,12 +3,18 @@ const path = require('path')
 const consola = require('consola')
 const feathers = require('@feathersjs/feathers')
 const express = require('@feathersjs/express')
-
+const socketio = require('@feathersjs/socketio')
+const RconService = require('./services/rconService')
 process.env.NODE_CONFIG_DIR = path.join(__dirname, 'config/')
 
 async function start () {
   const app = express(feathers())
+  app.use(express.json())
+  app.configure(express.rest());
+  app.configure(socketio());
 
+  app.use('/console', new RconService())
+  
   const { Nuxt, Builder } = require('nuxt')
 
   // Setup nuxt.js
