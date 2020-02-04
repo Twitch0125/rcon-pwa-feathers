@@ -1,7 +1,7 @@
 <template>
   <v-row align="center" justify="center">
     <v-col>
-      <Console></Console>
+      <Console :client="client"></Console>
     </v-col>
   </v-row>
 </template>
@@ -13,14 +13,15 @@ export default {
   computed: {
     connectionObj() {
       return this.$store.state.console.connectionObj
-    }
+    },
+    async client(){
+    let client = await this.$services.console.create(this.connectionObj)
+    return client
+    },
   },
-  async asyncData({ $axios }) {
-    const { data } = await $axios.get(`localhost:3030/api/rcon`)
-    return {
-      client: data.client
-    }
-  },
+      mounted(){
+        console.log('services', this.$services);
+      }
 }
 </script>
 

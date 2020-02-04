@@ -18,12 +18,15 @@
     "@feathersjs/express": "^1.3.1",
     "@feathersjs/feathers": "^3.3.1",
     "@feathersjs/socketio": "^4.5.1",
+    "@feathersjs/socketio-client": "^4.5.1",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
-    "rcon-client": "^4.2.0"
+    "rcon-client": "^4.2.0",
+    "socket.io-client": "^2.3.0",
+    "vue-feathers": "^0.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.9",
