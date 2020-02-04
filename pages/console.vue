@@ -14,14 +14,15 @@ export default {
     connectionObj() {
       return this.$store.state.console.connectionObj
     },
-    async client(){
-    let client = await this.$services.console.create(this.connectionObj)
-    return client
-    },
   },
-      mounted(){
-        console.log('services', this.$services);
-      }
+  data() {
+    return {
+      client: {}
+    }
+  },
+  async mounted() {
+    this.client = await this.$services.console.create(this.connectionObj)
+  }
 }
 </script>
 
